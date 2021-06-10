@@ -1,9 +1,6 @@
 import React from 'react'
 const Products = () => {
-  return (
-    <div>
-    </div>
-  )
+  return <div>Products</div>
 }
 
 export default Products

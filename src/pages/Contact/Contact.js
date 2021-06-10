@@ -1,13 +1,7 @@
 import React from 'react'
-import BackgroundWave from '../../components/elements/BackgroundWave'
 
 const Contact = () => {
-  return (
-    <div>
-      Contact
-      <BackgroundWave />
-    </div>
-  )
+  return <div>Contact</div>
 }
 
 export default Contact

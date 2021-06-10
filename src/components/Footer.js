@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaGithub } from 'react-icons/fa'
+import backgroundWave from '../assets/images/background-wave.png'
 
 const Footer = () => {
   return (
@@ -9,6 +10,7 @@ const Footer = () => {
       <GithubLink href="https://github.com/michalosman" target="_blank">
         <FaGithub />
       </GithubLink>
+      <BackgroundWave src={backgroundWave}/>
     </FooterWrapper>
   )
 }
@@ -30,11 +32,18 @@ const GithubLink = styled.a`
   margin-left: 1rem;
   color: ${({ theme }) => theme.colors.dark};
   font-size: 2rem;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.15s ease-in-out;
 
   &:hover {
     transform: scale(1.2);
   }
+`
+
+const BackgroundWave = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 `
 
 export default Footer
