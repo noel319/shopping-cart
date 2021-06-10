@@ -17,6 +17,11 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   padding: 5rem 25rem;
   background-color: ${({ theme }) => theme.colors.dark};
+
+  @media (max-width: 1630px) {
+    flex-direction: column;
+    gap: 5rem;
+  }
 `
 
 const Logo = styled.h1`

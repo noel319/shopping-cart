@@ -21,6 +21,8 @@ const GlobalStyle = styled.createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     background-color: ${({ theme }) => theme.colors.grey.light};
+    /* Footer support */
+    margin-bottom: 5.2rem;
   }
 
   h1,
@@ -53,6 +55,18 @@ const GlobalStyle = styled.createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  @media (max-width: 860px) {
+    html {
+      font-size: 50%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    html {
+      font-size: 40%;
+    }
   }
 `
 export default GlobalStyle

@@ -20,10 +20,20 @@ const NavbarWrapper = styled.nav`
   align-items: center;
   gap: 12rem;
   font-size: 2.4rem;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    gap: 5rem;
+  }
 `
 
 const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.light};
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 
 export default Navbar
