@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Button from './Button'
+import Button from './elements/Button'
 import { FaShoppingCart } from 'react-icons/fa'
 
 const Navbar = () => {

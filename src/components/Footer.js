@@ -26,8 +26,8 @@ const FooterWrapper = styled.footer`
 `
 
 const GithubLink = styled.a`
-  margin-left: 1rem;
   display: flex;
+  margin-left: 1rem;
   color: ${({ theme }) => theme.colors.dark};
   font-size: 2rem;
   transition: transform 0.2s ease-in-out;
