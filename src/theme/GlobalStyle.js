@@ -12,6 +12,9 @@ const GlobalStyle = styled.createGlobalStyle`
   html {
     font-size: 62.5%;
     line-height: 1.6;
+    /* Footer support */
+    position: relative;
+    min-height: 100%;
   }
 
   body {
