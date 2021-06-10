@@ -17,11 +17,7 @@ const GlobalStyle = styled.createGlobalStyle`
   body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
-    background-color: ${({ theme }) => theme.colors.primary};
-  }
-
-  header {
-    font-size: 3rem;
+    background-color: ${({ theme }) => theme.colors.grey.light};
   }
 
   h1,
@@ -57,5 +53,3 @@ const GlobalStyle = styled.createGlobalStyle`
   }
 `
 export default GlobalStyle
-
-// without styled. css formatting doesn't work
