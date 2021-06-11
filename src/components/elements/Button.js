@@ -1,8 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-const Button = ({ content }) => {
-  return <ButtonWrapper>{content}</ButtonWrapper>
+const Button = ({ content, type }) => {
+  return <ButtonWrapper type={type}>{content}</ButtonWrapper>
 }
 
 const ButtonWrapper = styled.button`
@@ -16,6 +16,17 @@ const ButtonWrapper = styled.button`
   &:hover {
     transform: scale(1.1);
   }
+
+  /* MESSAGE BUTTON */
+  ${(props) =>
+    props.type === 'messageBtn' &&
+    css`
+      width: 39rem;
+      background-color: ${({ theme }) => theme.colors.dark};
+      color: ${({ theme }) => theme.colors.light};
+      font-size: 4rem;
+      font-weight: bold;
+    `}
 `
 
 export default Button

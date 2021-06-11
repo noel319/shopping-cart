@@ -1,3 +1,4 @@
+// using * enables formatting
 import * as styled from 'styled-components'
 
 const GlobalStyle = styled.createGlobalStyle`
@@ -57,13 +58,25 @@ const GlobalStyle = styled.createGlobalStyle`
     cursor: pointer;
   }
 
-  @media (max-width: 860px) {
+  @media (max-width: 1600px) {
+    html {
+      font-size: 55%;
+    }
+  }
+
+  @media (max-width: 1400px) {
     html {
       font-size: 50%;
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 1300px) {
+    html {
+      font-size: 45%;
+    }
+  }
+
+  @media (max-width: 1200px) {
     html {
       font-size: 40%;
     }

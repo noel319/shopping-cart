@@ -21,13 +21,14 @@ const Header = () => {
 const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 5rem 25rem;
+  justify-content: center;
+  padding: 4rem 0;
+  gap: 30rem;
   background-color: ${({ theme }) => theme.colors.dark};
 
-  @media (max-width: 1630px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
   }
 `
 
@@ -39,12 +40,16 @@ const Logo = styled.h1`
 const Navbar = styled.nav`
   display: flex;
   align-items: center;
-  gap: 12rem;
+  justify-content: space-between;
   font-size: 2.4rem;
+  width: 80rem;
 
-  @media (max-width: 700px) {
-    flex-direction: column;
-    gap: 5rem;
+  @media (max-width: 600px) {
+    width: 60rem;
+  }
+
+  @media (max-width: 450px) {
+    width: 50rem;
   }
 `
 

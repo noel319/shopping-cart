@@ -10,7 +10,7 @@ const Footer = () => {
       <GithubLink href="https://github.com/michalosman" target="_blank">
         <FaGithub />
       </GithubLink>
-      <BackgroundWave src={backgroundWave}/>
+      <BackgroundWave src={backgroundWave} alt="background" />
     </FooterWrapper>
   )
 }
@@ -43,7 +43,7 @@ const BackgroundWave = styled.img`
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: -100;
 `
 
 export default Footer
