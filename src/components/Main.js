@@ -18,15 +18,13 @@ const Main = () => {
 }
 
 const MainWrapper = styled.main`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: ${({ theme }) => theme.widths.content};
   padding: 12rem 0;
   margin: 0 auto;
 
   @media (max-width: 1000px) {
     width: 100%;
+    padding: 8rem 0;
   }
 `
 

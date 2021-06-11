@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import homepageImage from '../../../assets/images/homepage-image.png'
 import Button from '../../elements/Button'
 import backgroundWave from '../../../assets/images/background-wave.png'
@@ -10,7 +11,9 @@ const Home = () => {
       <Message>
         <SmallMessage>Best online store of the year</SmallMessage>
         <BigMessage>We don't do fashion, we are fashion</BigMessage>
-        <Button content="Shop now" type="messageBtn"></Button>
+        <Link to="/products">
+          <Button content="Shop now" type="messageBtn"></Button>
+        </Link>
       </Message>
       <Image src={homepageImage} alt="people"></Image>
       <BackgroundWave src={backgroundWave} alt="background" />
@@ -20,9 +23,8 @@ const Home = () => {
 
 const HomeWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  width: 100%;
 
   @media (max-width: 1000px) {
     justify-content: center;
@@ -34,7 +36,6 @@ const Message = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 50rem;
-  min-width: 50rem;
 
   @media (max-width: 1000px) {
     align-items: center;
@@ -63,8 +64,8 @@ const Image = styled.img`
 
   @media (max-width: 1000px) {
     position: absolute;
-    opacity: 0.3;
     z-index: -1;
+    opacity: 0.3;
   }
 
   @media (max-width: 600px) {

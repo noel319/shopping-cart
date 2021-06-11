@@ -6,8 +6,8 @@ import Button from './elements/Button'
 
 const Header = () => {
   return (
-    <HeaderWrapper>
-      <Container>
+    <HeaderBackground>
+      <HeaderWrapper>
         <Logo>FakeStore</Logo>
         <Navbar>
           <NavbarLink to="/">Home</NavbarLink>
@@ -15,28 +15,27 @@ const Header = () => {
           <NavbarLink to="/contact">Contact</NavbarLink>
           <Button content={<FaShoppingCart />}></Button>
         </Navbar>
-      </Container>
-    </HeaderWrapper>
+      </HeaderWrapper>
+    </HeaderBackground>
   )
 }
 
-const HeaderWrapper = styled.header`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 0;
+const HeaderBackground = styled.header`
   background-color: ${({ theme }) => theme.colors.dark};
 `
 
-const Container = styled.div`
+const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: ${({ theme }) => theme.widths.content};
+  padding: 4rem 0;
+  margin: 0 auto;
 
   @media (max-width: 1000px) {
     flex-direction: column;
     gap: 4rem;
+    width: 100%;
   }
 `
 

@@ -7,8 +7,8 @@ const Button = ({ content, type }) => {
 
 const ButtonWrapper = styled.button`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
   border-radius: 50px;
   transition: transform 0.15s ease-in-out;
@@ -21,10 +21,10 @@ const ButtonWrapper = styled.button`
   ${(props) =>
     props.type === 'primary' &&
     css`
+      border-radius: 0px;
       width: 20rem;
       background-color: ${({ theme }) => theme.colors.primary};
       color: ${({ theme }) => theme.colors.dark};
-      border-radius: 0px;
     `}
 
   /* MESSAGE BUTTON */
