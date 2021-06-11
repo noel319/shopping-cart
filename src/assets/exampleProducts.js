@@ -28,7 +28,7 @@ const exampleProducts = [
   },
   {
     name: 'White T-shirt',
-    price: '19.99',
+    price: '$19.99',
     image: exampleImage,
   },
 ]

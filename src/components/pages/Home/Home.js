@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import homepageImage from '../../../assets/images/homepage-image.png'
 import Button from '../../elements/Button'
-import backgroundWave from '../../../assets/images/background-wave.png'
+import BackgroundWave from '../../elements/BackgroundWave'
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
         </Link>
       </Message>
       <Image src={homepageImage} alt="people"></Image>
-      <BackgroundWave src={backgroundWave} alt="background" />
+      <BackgroundWave />
     </HomeWrapper>
   )
 }
@@ -74,13 +74,6 @@ const Image = styled.img`
   @media (max-width: 600px) {
     max-width: 60rem;
   }
-`
-
-const BackgroundWave = styled.img`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -100;
 `
 
 export default Home
