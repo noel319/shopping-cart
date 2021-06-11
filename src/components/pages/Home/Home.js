@@ -25,6 +25,8 @@ const HomeWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  /* hide footer */
+  margin-bottom: 7rem;
 
   @media (max-width: 1000px) {
     justify-content: center;
@@ -45,6 +47,7 @@ const Message = styled.div`
 const SmallMessage = styled.div`
   color: ${({ theme }) => theme.colors.grey.dark};
   font-size: 1.9rem;
+  font-weight: bold;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
 `

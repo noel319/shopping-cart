@@ -17,14 +17,27 @@ const ButtonWrapper = styled.button`
     transform: scale(1.1);
   }
 
-  /* PRIMARY BUTTON */
+  /* PRODUCT BUTTON */
   ${(props) =>
-    props.type === 'primary' &&
+    props.type === 'productBtn' &&
     css`
+      width: 100%;
+      padding: 1rem;
       border-radius: 0px;
-      width: 20rem;
       background-color: ${({ theme }) => theme.colors.primary};
       color: ${({ theme }) => theme.colors.dark};
+      font-weight: bold;
+      transition: background-color 0.15s ease-in-out;
+
+      &:hover {
+        background-color: #35eec2;
+        transform: scale(1);
+      }
+
+      &:active {
+        background-color: #24ddb1;
+        transition: background-color 0.05s ease-in-out;
+      }
     `}
 
   /* MESSAGE BUTTON */

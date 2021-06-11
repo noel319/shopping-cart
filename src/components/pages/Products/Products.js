@@ -20,8 +20,17 @@ const Products = () => {
 const ProductsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15rem;
-  width: 100%;
+  gap: 12rem;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(2, 40rem);
+    justify-content: center;
+    gap: 8rem;
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 40rem);
+  }
 `
 
 export default Products
