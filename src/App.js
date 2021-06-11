@@ -1,21 +1,14 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Header from './components/Header'
+import Main from './components/Main'
 import Footer from './components/Footer'
-import Home from './pages/Home'
-import Products from './pages/Products'
-import Contact from './pages/Contact'
-
 const App = () => {
   return (
     <div>
       <Router>
         <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/products" component={Products} />
-          <Route exact path="/contact" component={Contact} />
-        </Switch>
+        <Main />
       </Router>
       <Footer />
     </div>

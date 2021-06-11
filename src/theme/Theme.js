@@ -9,6 +9,10 @@ const Theme = {
       dark: '#7B7B7B',
     },
   },
+
+  widths: {
+    content: '140rem',
+  },
 }
 
 export default Theme

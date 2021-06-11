@@ -7,13 +7,15 @@ import Button from './elements/Button'
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Logo>FakeStore</Logo>
-      <Navbar>
-        <NavbarLink to="/">Home</NavbarLink>
-        <NavbarLink to="/products">Products</NavbarLink>
-        <NavbarLink to="/contact">Contact</NavbarLink>
-        <Button content={<FaShoppingCart />}></Button>
-      </Navbar>
+      <Container>
+        <Logo>FakeStore</Logo>
+        <Navbar>
+          <NavbarLink to="/">Home</NavbarLink>
+          <NavbarLink to="/products">Products</NavbarLink>
+          <NavbarLink to="/contact">Contact</NavbarLink>
+          <Button content={<FaShoppingCart />}></Button>
+        </Navbar>
+      </Container>
     </HeaderWrapper>
   )
 }
@@ -23,8 +25,14 @@ const HeaderWrapper = styled.header`
   align-items: center;
   justify-content: center;
   padding: 4rem 0;
-  gap: 30rem;
   background-color: ${({ theme }) => theme.colors.dark};
+`
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: ${({ theme }) => theme.widths.content};
 
   @media (max-width: 1000px) {
     flex-direction: column;

@@ -17,6 +17,16 @@ const ButtonWrapper = styled.button`
     transform: scale(1.1);
   }
 
+  /* PRIMARY BUTTON */
+  ${(props) =>
+    props.type === 'primary' &&
+    css`
+      width: 20rem;
+      background-color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.dark};
+      border-radius: 0px;
+    `}
+
   /* MESSAGE BUTTON */
   ${(props) =>
     props.type === 'messageBtn' &&
