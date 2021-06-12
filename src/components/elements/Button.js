@@ -16,7 +16,7 @@ const ButtonWrapper = styled.button`
   &:hover {
     transform: scale(1.1);
   }
-
+ 
   /* PRIMARY BUTTON */
   ${(props) =>
     props.type === 'primary' &&
@@ -74,8 +74,8 @@ const ButtonWrapper = styled.button`
       font-weight: bold;
     `}
 
-    /* AMOUNT CHANGER BUTTON */
-    ${(props) =>
+  /* AMOUNT CHANGER BUTTON */
+  ${(props) =>
     (props.type === 'increment') | (props.type === 'decrement') &&
     css`
       padding: 1rem;

@@ -43,8 +43,6 @@ const CartWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.grey.light};
   font-size: 3rem;
   font-weight: bold;
-  /* footer support to make cart look consistent */
-  padding-bottom: 11.2rem;
   /* overlay support */
   z-index: 1;
 `
@@ -60,6 +58,7 @@ const Products = styled.div`
   overflow: auto;
   gap: 3rem;
   width: 100%;
+  height: 45rem;
 `
 
 const Overlay = styled.div`
