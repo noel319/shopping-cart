@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ProductCard from './ProductCard'
-import exampleProducts from '../../../assets/exampleProducts'
+import exampleProducts from '../../../assets/examples/exampleProducts'
 import { v4 as uuidv4 } from 'uuid'
 
 const Products = () => {

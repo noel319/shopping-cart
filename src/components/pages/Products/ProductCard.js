@@ -10,9 +10,9 @@ const ProductCard = ({ image, name, price }) => {
       <div>{price}</div>
       <Button
         content="Add to cart"
+        size="wide"
         color="primary"
-        hoverEffect="color"
-        fullWidth
+        animation="color"
       />
     </ProductCardWrapper>
   )

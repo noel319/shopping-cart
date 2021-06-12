@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from '../elements/Button'
 import CartItem from './CartItem'
-import exampleProducts from '../../assets/exampleProducts'
+import exampleProducts from '../../assets/examples/exampleProducts'
 import { v4 as uuidv4 } from 'uuid'
 
 const Cart = () => {
@@ -23,11 +23,11 @@ const Cart = () => {
         <div>Total: $179.91</div>
         <Button
           content="Checkout"
+          size="wide"
           color="primary"
-          hoverEffect="color"
-          fullWidth
+          animation="color"
         />
-        <Button content="Close" color="red" hoverEffect="color" fullWidth />
+        <Button content="Close" size="wide" color="red" animation="color" />
       </CartWrapper>
       <Overlay />
     </>

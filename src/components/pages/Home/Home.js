@@ -15,9 +15,9 @@ const Home = () => {
           <Button
             content="Shop now"
             size="big"
+            shape="round"
             color="dark"
-            hoverEffect="scale"
-            round
+            animation="scale"
           ></Button>
         </Link>
       </Message>

@@ -1,14 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-const Button = ({ content, round, fullWidth, size, color, hoverEffect }) => {
+const Button = ({ content, shape, size, color, animation }) => {
   return (
     <ButtonWrapper
-      round={round}
-      fullWidth={fullWidth}
       size={size}
+      shape={shape}
       color={color}
-      hoverEffect={hoverEffect}
+      animation={animation}
     >
       {content}
     </ButtonWrapper>
@@ -22,27 +21,31 @@ const ButtonWrapper = styled.button`
   padding: 1rem;
   font-weight: bold;
 
-  ${({ round }) =>
-    round &&
-    css`
-      padding: 2rem;
-      border-radius: 50px;
-    `}
+  /* SIZE */
 
-  ${({ fullWidth }) =>
-    fullWidth &&
-    css`
-      width: 100%;
-    `}
-
-    ${({ size }) =>
+  ${({ size }) =>
     size === 'big' &&
     css`
       width: 39rem;
       font-size: 4rem;
     `}
 
-  /* COLORS */
+  ${({ size }) =>
+    size === 'wide' &&
+    css`
+      width: 100%;
+    `}
+
+  /* SHAPE */
+
+  ${({ shape }) =>
+    shape === 'round' &&
+    css`
+      padding: 2rem;
+      border-radius: 50px;
+    `}
+
+  /* COLOR */
 
   ${({ color }) =>
     color === 'primary' &&
@@ -51,31 +54,31 @@ const ButtonWrapper = styled.button`
       color: ${({ theme }) => theme.colors.dark};
     `}
 
-    ${({ color }) =>
+  ${({ color }) =>
     color === 'red' &&
     css`
       background-color: ${({ theme }) => theme.colors.red};
       color: ${({ theme }) => theme.colors.dark};
     `}
 
-    ${({ color }) =>
+  ${({ color }) =>
     color === 'grey' &&
     css`
       background-color: ${({ theme }) => theme.colors.grey.main};
       color: ${({ theme }) => theme.colors.dark};
     `}
 
-    ${({ color }) =>
+  ${({ color }) =>
     color === 'dark' &&
     css`
       background-color: ${({ theme }) => theme.colors.dark};
       color: ${({ theme }) => theme.colors.light};
     `}
 
-  /* HOVER EFFECTS */
+  /* ANIMATION */
 
-  ${({ hoverEffect }) =>
-    hoverEffect === 'scale' &&
+  ${({ animation }) =>
+    animation === 'scale' &&
     css`
       transition: transform 0.15s ease-in-out;
 
@@ -88,8 +91,8 @@ const ButtonWrapper = styled.button`
       }
     `}
 
-  ${({ hoverEffect }) =>
-    hoverEffect === 'color' &&
+  ${({ animation }) =>
+    animation === 'color' &&
     css`
       transition: background-color 0.15s ease-in-out;
 

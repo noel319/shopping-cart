@@ -17,8 +17,8 @@ const Header = () => {
           <NavbarLink to="/contact">Contact</NavbarLink>
           <Button
             content={<FaShoppingCart />}
-            round
-            hoverEffect="scale"
+            shape="round"
+            animation="scale"
           ></Button>
         </Navbar>
       </HeaderWrapper>

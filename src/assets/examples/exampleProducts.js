@@ -1,4 +1,4 @@
-import exampleImage from './images/example-product.png'
+import exampleImage from './example-product.png'
 
 const exampleProducts = [
   {
