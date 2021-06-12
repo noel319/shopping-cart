@@ -4,6 +4,7 @@ import Button from '../elements/Button'
 import CartItem from './CartItem'
 import exampleProducts from '../../assets/exampleProducts'
 import { v4 as uuidv4 } from 'uuid'
+import {FaTimesCircle} from 'react-icons/fa'
 
 const Cart = () => {
   const products = exampleProducts.map((product) => (
@@ -16,12 +17,16 @@ const Cart = () => {
   ))
 
   return (
-    <CartWrapper>
-      Your shopping cart
-      <Products>{products}</Products>
-      <TotalCost>Total: $179.91</TotalCost>
-      <Button content="Checkout" type="primary" />
-    </CartWrapper>
+    <>
+      <CartWrapper>
+        <Button content={<FaTimesCircle/>} type='close'/>
+        Your shopping cart
+        <Products>{products}</Products>
+        <TotalCost>Total: $179.91</TotalCost>
+        <Button content="Checkout" type="primary" />
+      </CartWrapper>
+      <Overlay />
+    </>
   )
 }
 
@@ -36,12 +41,14 @@ const CartWrapper = styled.div`
   align-items: center;
   gap: 6rem;
   height: 100%;
-  width: 60rem;
+  width: 59rem;
   padding: 6rem;
   background-color: ${({ theme }) => theme.colors.grey.light};
   font-size: 3rem;
   /* footer support to make cart look consistent */
   padding-bottom: 11.2rem;
+  /* overlay support */
+  z-index: 1;
 `
 
 const Products = styled.div`
@@ -54,6 +61,16 @@ const Products = styled.div`
 
 const TotalCost = styled.div`
   font-weight: bold;
+`
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
 `
 
 export default Cart
