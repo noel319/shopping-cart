@@ -10,8 +10,8 @@ const App = () => {
       <Router>
         <Header />
         <Main />
+        <Footer />
       </Router>
-      <Footer />
       <Cart />
     </div>
   )

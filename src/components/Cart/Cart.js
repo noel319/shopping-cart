@@ -48,7 +48,7 @@ const Cart = () => {
 const CartWrapper = styled.div`
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -110%;
   display: flex;
   flex-direction: column;
   align-items: center;

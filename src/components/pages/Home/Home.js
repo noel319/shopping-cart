@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import homepageImage from '../../../assets/images/homepage-image.png'
 import underline from '../../../assets/images/underline.png'
 import Button from '../../elements/Button'
-import BackgroundWave from '../../elements/BackgroundWave'
 
 const Home = () => {
   return (
@@ -24,7 +23,6 @@ const Home = () => {
         </Link>
       </Message>
       <Image src={homepageImage} alt="people"></Image>
-      <BackgroundWave />
     </HomeWrapper>
   )
 }
@@ -39,6 +37,17 @@ const HomeWrapper = styled.div`
   @media (max-width: 1000px) {
     align-items: center;
     justify-content: center;
+  }
+
+  animation: fadeIn ease 2s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `
 

@@ -31,6 +31,17 @@ const ProductsWrapper = styled.div`
   @media (max-width: 700px) {
     grid-template-columns: repeat(1, 40rem);
   }
+
+  animation: fadeIn ease 2s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `
 
 export default Products

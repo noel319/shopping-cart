@@ -7,7 +7,6 @@ import {
   FaTwitter,
   FaInstagram,
 } from 'react-icons/fa'
-import BackgroundWave from '../../elements/BackgroundWave'
 
 const Contact = () => {
   return (
@@ -45,7 +44,6 @@ const Contact = () => {
         <p>FakeStore</p>
         <p>Hollywood Boulevard 42, Los Angeles USA</p>
       </ContactInfo>
-      <BackgroundWave />
     </ContactWrapper>
   )
 }
@@ -54,9 +52,20 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
   /* hide footer */
-  margin-bottom: 21rem;
+  margin-bottom: 14.8rem;
+
+  animation: fadeIn ease 2s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `
 
 const SocialMedia = styled.div`
@@ -80,6 +89,7 @@ const ContactInfo = styled.div`
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 5rem;
 
   @media (max-width: 600px) {
     font-size: 2.4rem;

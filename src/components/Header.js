@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
 import Button from './elements/Button'
 import { openCart } from '../state/actions'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 const Header = () => {
   const dispatch = useDispatch()

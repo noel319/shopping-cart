@@ -1,14 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaGithub } from 'react-icons/fa'
+import BackgroundWave from '../components/elements/BackgroundWave'
+import { useLocation } from 'react-router-dom'
 
 const Footer = () => {
+  const location = useLocation()
+
   return (
     <FooterWrapper>
       Copyright © 2021 michalosman
       <GithubLink href="https://github.com/michalosman" target="_blank">
         <FaGithub />
       </GithubLink>
+      {location.pathname !== '/products' && <BackgroundWave />}
     </FooterWrapper>
   )
 }
@@ -22,14 +27,14 @@ const FooterWrapper = styled.footer`
   justify-content: center;
   width: 100%;
   padding: 1rem 0;
-  font-size: 2rem;
+  font-size: 2.4rem;
 `
 
 const GithubLink = styled.a`
   display: flex;
   margin-left: 1rem;
   color: ${({ theme }) => theme.colors.dark};
-  font-size: 2rem;
+  font-size: 2.4rem;
   transition: transform 0.15s ease-in-out;
 
   &:hover {
