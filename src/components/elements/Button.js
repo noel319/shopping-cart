@@ -1,98 +1,136 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-const Button = ({ content, type }) => {
-  return <ButtonWrapper type={type}>{content}</ButtonWrapper>
+const Button = ({ content, round, fullWidth, size, color, hoverEffect }) => {
+  return (
+    <ButtonWrapper
+      round={round}
+      fullWidth={fullWidth}
+      size={size}
+      color={color}
+      hoverEffect={hoverEffect}
+    >
+      {content}
+    </ButtonWrapper>
+  )
 }
 
 const ButtonWrapper = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  border-radius: 50px;
-  transition: transform 0.15s ease-in-out;
+  padding: 1rem;
+  font-weight: bold;
 
-  &:hover {
-    transform: scale(1.1);
-  }
- 
-  /* PRIMARY BUTTON */
-  ${(props) =>
-    props.type === 'primary' &&
+  ${({ round }) =>
+    round &&
     css`
-      width: 100%;
-      padding: 1rem;
-      border-radius: 0px;
-      background-color: ${({ theme }) => theme.colors.primary};
-      color: ${({ theme }) => theme.colors.dark};
-      font-weight: bold;
-      transition: background-color 0.15s ease-in-out;
-
-      &:hover {
-        background-color: #35eec2;
-        transform: scale(1);
-      }
-
-      &:active {
-        background-color: #24ddb1;
-        transition: background-color 0.05s ease-in-out;
-      }
+      padding: 2rem;
+      border-radius: 50px;
     `}
 
-  /* CLOSE BUTTON */
-  ${(props) =>
-    props.type === 'close' &&
+  ${({ fullWidth }) =>
+    fullWidth &&
     css`
       width: 100%;
-      padding: 1rem;
-      border-radius: 0px;
-      background-color: #ff9999;
-      color: ${({ theme }) => theme.colors.dark};
-      font-weight: bold;
-      transition: background-color 0.15s ease-in-out;
-
-      &:hover {
-        background-color: #ee8888;
-        transform: scale(1);
-      }
-
-      &:active {
-        background-color: #dd7777;
-        transition: background-color 0.05s ease-in-out;
-      }
     `}
 
-  /* BIG BUTTON */
-  ${(props) =>
-    props.type === 'big' &&
+    ${({ size }) =>
+    size === 'big' &&
     css`
       width: 39rem;
-      background-color: ${({ theme }) => theme.colors.dark};
-      color: ${({ theme }) => theme.colors.light};
       font-size: 4rem;
-      font-weight: bold;
     `}
 
-  /* AMOUNT CHANGER BUTTON */
-  ${(props) =>
-    (props.type === 'increment') | (props.type === 'decrement') &&
+  /* COLORS */
+
+  ${({ color }) =>
+    color === 'primary' &&
     css`
-      padding: 1rem;
-      border-radius: 0px;
+      background-color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.dark};
+    `}
+
+    ${({ color }) =>
+    color === 'red' &&
+    css`
+      background-color: ${({ theme }) => theme.colors.red};
+      color: ${({ theme }) => theme.colors.dark};
+    `}
+
+    ${({ color }) =>
+    color === 'grey' &&
+    css`
       background-color: ${({ theme }) => theme.colors.grey.main};
       color: ${({ theme }) => theme.colors.dark};
-      transition: background-color 0.15s ease-in-out;
+    `}
+
+    ${({ color }) =>
+    color === 'dark' &&
+    css`
+      background-color: ${({ theme }) => theme.colors.dark};
+      color: ${({ theme }) => theme.colors.light};
+    `}
+
+  /* HOVER EFFECTS */
+
+  ${({ hoverEffect }) =>
+    hoverEffect === 'scale' &&
+    css`
+      transition: transform 0.15s ease-in-out;
 
       &:hover {
-        background-color: #d4d4d4;
-        transform: scale(1);
+        transform: scale(1.1);
       }
 
       &:active {
-        background-color: #c3c3c3;
-        transition: background-color 0.05s ease-in-out;
+        transform: scale(1.02);
       }
+    `}
+
+  ${({ hoverEffect }) =>
+    hoverEffect === 'color' &&
+    css`
+      transition: background-color 0.15s ease-in-out;
+
+      ${({ color }) =>
+        color === 'primary' &&
+        css`
+          &:hover {
+            background-color: ${({ theme }) => theme.colors.hover.primary};
+          }
+
+          &:active {
+            background-color: ${({ theme }) => theme.colors.active.primary};
+            transition: background-color 0.05s ease-in-out;
+          }
+        `}
+
+      ${({ color }) =>
+        color === 'red' &&
+        css`
+          &:hover {
+            background-color: ${({ theme }) => theme.colors.hover.red};
+          }
+
+          &:active {
+            background-color: ${({ theme }) => theme.colors.active.red};
+            transition: background-color 0.05s ease-in-out;
+          }
+        `}
+
+        ${({ color }) =>
+        color === 'grey' &&
+        css`
+          &:hover {
+            background-color: ${({ theme }) => theme.colors.hover.grey};
+          }
+
+          &:active {
+            background-color: ${({ theme }) => theme.colors.active.grey};
+            transition: background-color 0.05s ease-in-out;
+          }
+        `}
     `}
 `
 

@@ -15,7 +15,11 @@ const Header = () => {
           <NavbarLink to="/">Home</NavbarLink>
           <NavbarLink to="/products">Products</NavbarLink>
           <NavbarLink to="/contact">Contact</NavbarLink>
-          <Button content={<FaShoppingCart />}></Button>
+          <Button
+            content={<FaShoppingCart />}
+            round
+            hoverEffect="scale"
+          ></Button>
         </Navbar>
       </HeaderWrapper>
     </HeaderBackground>

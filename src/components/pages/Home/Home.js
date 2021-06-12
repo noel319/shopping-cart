@@ -12,7 +12,13 @@ const Home = () => {
         <SmallMessage>Best online store of the year</SmallMessage>
         <BigMessage>We don't do fashion, we are fashion</BigMessage>
         <Link to="/products">
-          <Button content="Shop now" type="big"></Button>
+          <Button
+            content="Shop now"
+            size="big"
+            color="dark"
+            hoverEffect="scale"
+            round
+          ></Button>
         </Link>
       </Message>
       <Image src={homepageImage} alt="people"></Image>

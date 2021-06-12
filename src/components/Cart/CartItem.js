@@ -11,9 +11,17 @@ const CartItem = ({ name, price, image }) => {
         <div>{name}</div>
         <div>{price}</div>
         <AmountChanger>
-          <Button content={<FaMinus />} type="decrement"></Button>
+          <Button
+            content={<FaMinus />}
+            color="grey"
+            hoverEffect="color"
+          ></Button>
           <div>1</div>
-          <Button content={<FaPlus />} type="increment"></Button>
+          <Button
+            content={<FaPlus />}
+            color="grey"
+            hoverEffect="color"
+          ></Button>
         </AmountChanger>
       </Details>
     </CartItemWrapper>

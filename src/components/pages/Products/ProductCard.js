@@ -8,7 +8,12 @@ const ProductCard = ({ image, name, price }) => {
       <img src={image} alt={name}></img>
       <div>{name}</div>
       <div>{price}</div>
-      <Button content="Add to cart" type="primary" />
+      <Button
+        content="Add to cart"
+        color="primary"
+        hoverEffect="color"
+        fullWidth
+      />
     </ProductCardWrapper>
   )
 }
