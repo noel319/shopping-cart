@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../../elements/Button'
 import styled from 'styled-components'
+import Button from '../../elements/Button'
 
 const ProductCard = ({ image, name, price }) => {
   return (

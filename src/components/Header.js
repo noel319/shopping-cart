@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
 import Button from './elements/Button'
 import { openCart } from '../state/actions'
-import { useDispatch } from 'react-redux'
 
 const Header = () => {
   const dispatch = useDispatch()

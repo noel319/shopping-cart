@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../elements/Button'
 import { FaMinus, FaPlus } from 'react-icons/fa'
+import Button from '../elements/Button'
 
 const CartItem = ({ name, price, image }) => {
   return (

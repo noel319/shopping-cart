@@ -1,10 +1,10 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { v4 as uuidv4 } from 'uuid'
+import { useSelector, useDispatch } from 'react-redux'
 import Button from '../elements/Button'
 import CartItem from './CartItem'
 import exampleProducts from '../../assets/examples/exampleProducts'
-import { v4 as uuidv4 } from 'uuid'
-import { useSelector, useDispatch } from 'react-redux'
 import { closeCart } from '../../state/actions'
 
 const Cart = () => {

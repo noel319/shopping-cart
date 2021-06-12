@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaGithub } from 'react-icons/fa'
-import BackgroundWave from '../components/elements/BackgroundWave'
 import { useLocation } from 'react-router-dom'
+import BackgroundWave from '../components/elements/BackgroundWave'
 
 const Footer = () => {
   const location = useLocation()
