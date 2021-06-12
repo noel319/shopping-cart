@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import Cart from './components/Cart'
 const App = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const App = () => {
         <Main />
       </Router>
       <Footer />
+      <Cart />
     </div>
   )
 }

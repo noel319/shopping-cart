@@ -17,9 +17,9 @@ const ButtonWrapper = styled.button`
     transform: scale(1.1);
   }
 
-  /* PRODUCT BUTTON */
+  /* PRIMARY BUTTON */
   ${(props) =>
-    props.type === 'productBtn' &&
+    props.type === 'primary' &&
     css`
       width: 100%;
       padding: 1rem;
@@ -40,9 +40,9 @@ const ButtonWrapper = styled.button`
       }
     `}
 
-  /* MESSAGE BUTTON */
+  /* BIG BUTTON */
   ${(props) =>
-    props.type === 'messageBtn' &&
+    props.type === 'big' &&
     css`
       width: 39rem;
       background-color: ${({ theme }) => theme.colors.dark};

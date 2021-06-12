@@ -12,7 +12,7 @@ const Home = () => {
         <SmallMessage>Best online store of the year</SmallMessage>
         <BigMessage>We don't do fashion, we are fashion</BigMessage>
         <Link to="/products">
-          <Button content="Shop now" type="messageBtn"></Button>
+          <Button content="Shop now" type="big"></Button>
         </Link>
       </Message>
       <Image src={homepageImage} alt="people"></Image>
@@ -23,7 +23,7 @@ const Home = () => {
 
 const HomeWrapper = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   /* hide footer */
   margin-bottom: 7rem;
