@@ -1,11 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Button from '../elements/Button'
 import CartItem from './CartItem'
 import exampleProducts from '../../assets/examples/exampleProducts'
 import { v4 as uuidv4 } from 'uuid'
+import { useSelector, useDispatch } from 'react-redux'
+import { closeCart } from '../../state/actions'
 
 const Cart = () => {
+  const isCartOpen = useSelector((state) => state.isCartOpen)
+  const dispatch = useDispatch()
+
   const products = exampleProducts.map((product) => (
     <CartItem
       key={uuidv4()}
@@ -17,7 +22,7 @@ const Cart = () => {
 
   return (
     <>
-      <CartWrapper>
+      <CartWrapper isOpen={isCartOpen}>
         <Title>Your shopping cart</Title>
         <Products>{products}</Products>
         <div>Total: $179.91</div>
@@ -27,17 +32,23 @@ const Cart = () => {
           color="primary"
           animation="color"
         />
-        <Button content="Close" size="wide" color="red" animation="color" />
+        <Button
+          onClick={() => dispatch(closeCart())}
+          content="Close"
+          size="wide"
+          color="red"
+          animation="color"
+        />
       </CartWrapper>
-      <Overlay />
+      <Overlay onClick={() => dispatch(closeCart())} isOpen={isCartOpen} />
     </>
   )
 }
 
 const CartWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,8 +59,14 @@ const CartWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.grey.light};
   font-size: 3rem;
   font-weight: bold;
-  /* overlay support */
+  transition: right 0.85s ease-in-out;
   z-index: 1;
+
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      right: 0;
+    `}
 `
 
 const Title = styled.div`
@@ -67,13 +84,20 @@ const Products = styled.div`
 `
 
 const Overlay = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
-  width: 100vw;
+  left: -100%;
+  width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.6;
+  transition: left 0.85s ease-in-out;
+
+  ${({ isOpen }) =>
+    isOpen &&
+    css`
+      left: 0;
+    `}
 `
 
 export default Cart

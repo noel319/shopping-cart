@@ -4,12 +4,16 @@ import { ThemeProvider } from 'styled-components'
 import App from './App'
 import GlobalStyle from './theme/GlobalStyle'
 import Theme from './theme/Theme'
+import store from './state/store'
+import { Provider } from 'react-redux'
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

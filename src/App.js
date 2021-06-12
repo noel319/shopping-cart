@@ -12,7 +12,7 @@ const App = () => {
         <Main />
       </Router>
       <Footer />
-      {/* <Cart /> */}
+      <Cart />
     </div>
   )
 }

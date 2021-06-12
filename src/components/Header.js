@@ -3,8 +3,12 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
 import Button from './elements/Button'
+import { openCart } from '../state/actions'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Header = () => {
+  const dispatch = useDispatch()
+
   return (
     <HeaderBackground>
       <HeaderWrapper>
@@ -16,6 +20,7 @@ const Header = () => {
           <NavbarLink to="/products">Products</NavbarLink>
           <NavbarLink to="/contact">Contact</NavbarLink>
           <Button
+            onClick={() => dispatch(openCart())}
             content={<FaShoppingCart />}
             shape="round"
             animation="scale"

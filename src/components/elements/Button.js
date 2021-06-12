@@ -1,9 +1,10 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-const Button = ({ content, shape, size, color, animation }) => {
+const Button = ({ onClick, content, shape, size, color, animation }) => {
   return (
     <ButtonWrapper
+      onClick={onClick}
       size={size}
       shape={shape}
       color={color}

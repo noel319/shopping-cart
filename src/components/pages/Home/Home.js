@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import homepageImage from '../../../assets/images/homepage-image.png'
+import underline from '../../../assets/images/underline.png'
 import Button from '../../elements/Button'
 import BackgroundWave from '../../elements/BackgroundWave'
 
@@ -11,6 +12,7 @@ const Home = () => {
       <Message>
         <SmallMessage>Best online store of the year</SmallMessage>
         <BigMessage>We don't do fashion, we are fashion</BigMessage>
+        <Underline src={underline} />
         <Link to="/products">
           <Button
             content="Shop now"
@@ -29,12 +31,13 @@ const Home = () => {
 
 const HomeWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   /* hide footer */
   margin-bottom: 7rem;
 
   @media (max-width: 1000px) {
+    align-items: center;
     justify-content: center;
   }
 `
@@ -59,12 +62,22 @@ const SmallMessage = styled.div`
 `
 
 const BigMessage = styled.div`
-  margin-bottom: 3rem;
   font-size: 6.4rem;
   font-weight: bold;
 
   @media (max-width: 1000px) {
     text-align: center;
+    margin-bottom: 3rem;
+  }
+`
+
+const Underline = styled.img`
+  width: 25rem;
+  margin-top: -1.5rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 1000px) {
+    display: none;
   }
 `
 
