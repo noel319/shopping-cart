@@ -40,6 +40,29 @@ const ButtonWrapper = styled.button`
       }
     `}
 
+  /* CLOSE BUTTON */
+  ${(props) =>
+    props.type === 'close' &&
+    css`
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0px;
+      background-color: #ff9999;
+      color: ${({ theme }) => theme.colors.dark};
+      font-weight: bold;
+      transition: background-color 0.15s ease-in-out;
+
+      &:hover {
+        background-color: #ee8888;
+        transform: scale(1);
+      }
+
+      &:active {
+        background-color: #dd7777;
+        transition: background-color 0.05s ease-in-out;
+      }
+    `}
+
   /* BIG BUTTON */
   ${(props) =>
     props.type === 'big' &&
@@ -51,24 +74,7 @@ const ButtonWrapper = styled.button`
       font-weight: bold;
     `}
 
-  /* CLOSE BUTTON */
-  ${(props) =>
-    props.type === 'close' &&
-    css`
-      position: absolute;
-      top: 5rem;
-      right: 3rem;
-      padding: 0;
-      color: red;
-      font-size: 6rem;
-      transition: transform 0.2s ease-in-out;
-
-      &:hover {
-        transform: rotate(90deg);
-      }
-    `}
-
-    /* AMOUNT CHANGER */
+    /* AMOUNT CHANGER BUTTON */
     ${(props) =>
     (props.type === 'increment') | (props.type === 'decrement') &&
     css`
@@ -79,12 +85,12 @@ const ButtonWrapper = styled.button`
       transition: background-color 0.15s ease-in-out;
 
       &:hover {
-        background-color: #35eec2;
+        background-color: #d4d4d4;
         transform: scale(1);
       }
 
       &:active {
-        background-color: #24ddb1;
+        background-color: #c3c3c3;
         transition: background-color 0.05s ease-in-out;
       }
     `}

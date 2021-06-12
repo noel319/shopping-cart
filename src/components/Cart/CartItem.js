@@ -7,48 +7,40 @@ const CartItem = ({ name, price, image }) => {
   return (
     <CartItemWrapper>
       <Image src={image}></Image>
-      <Info>
-        <p>{name}</p>
-        <p>{price}</p>
+      <Details>
+        <div>{name}</div>
+        <div>{price}</div>
         <AmountChanger>
           <Button content={<FaMinus />} type="decrement"></Button>
-          <Amount>1</Amount>
+          <div>1</div>
           <Button content={<FaPlus />} type="increment"></Button>
         </AmountChanger>
-      </Info>
+      </Details>
     </CartItemWrapper>
   )
 }
 
 const CartItemWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 2rem;
-  font-weight: bold;
 `
 
 const Image = styled.img`
   width: 14rem;
 `
 
-const Info = styled.div`
+const Details = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
   width: 100%;
+  font-size: 2rem;
 `
 
 const AmountChanger = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 3rem;
 `
-
-const Amount = styled.div``
 
 export default CartItem

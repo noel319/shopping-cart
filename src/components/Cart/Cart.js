@@ -4,7 +4,6 @@ import Button from '../elements/Button'
 import CartItem from './CartItem'
 import exampleProducts from '../../assets/exampleProducts'
 import { v4 as uuidv4 } from 'uuid'
-import {FaTimesCircle} from 'react-icons/fa'
 
 const Cart = () => {
   const products = exampleProducts.map((product) => (
@@ -19,18 +18,16 @@ const Cart = () => {
   return (
     <>
       <CartWrapper>
-        <Button content={<FaTimesCircle/>} type='close'/>
-        Your shopping cart
+        <Title>Your shopping cart</Title>
         <Products>{products}</Products>
-        <TotalCost>Total: $179.91</TotalCost>
+        <div>Total: $179.91</div>
         <Button content="Checkout" type="primary" />
+        <Button content="Close" type="close" />
       </CartWrapper>
       <Overlay />
     </>
   )
 }
-
-//need to darken the whole page
 
 const CartWrapper = styled.div`
   position: absolute;
@@ -39,16 +36,22 @@ const CartWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6rem;
+  gap: 4rem;
   height: 100%;
   width: 59rem;
   padding: 6rem;
   background-color: ${({ theme }) => theme.colors.grey.light};
   font-size: 3rem;
+  font-weight: bold;
   /* footer support to make cart look consistent */
   padding-bottom: 11.2rem;
   /* overlay support */
   z-index: 1;
+`
+
+const Title = styled.div`
+  font-size: 4rem;
+  margin-bottom: 2rem;
 `
 
 const Products = styled.div`
@@ -57,10 +60,6 @@ const Products = styled.div`
   overflow: auto;
   gap: 3rem;
   width: 100%;
-`
-
-const TotalCost = styled.div`
-  font-weight: bold;
 `
 
 const Overlay = styled.div`
