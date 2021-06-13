@@ -13,6 +13,10 @@ const CartItem = ({ id, title, price, image, quantity }) => {
     return title.length <= 14 ? title : title.substr(0, 14) + '...'
   }
 
+  const sumPrice = () => {
+    return (cartItem.price * cartItem.quantity).toFixed(2)
+  }
+
   return (
     <CartItemWrapper>
       <ImageContainer>
@@ -20,7 +24,7 @@ const CartItem = ({ id, title, price, image, quantity }) => {
       </ImageContainer>
       <Details>
         <Title>{formatTitle(title)}</Title>
-        <div>${price}</div>
+        <div>${sumPrice()}</div>
         <AmountChanger>
           <Button
             onClick={() => dispatch(removeFromCart(cartItem))}

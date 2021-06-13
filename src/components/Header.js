@@ -15,8 +15,6 @@ const Header = () => {
     return cart.reduce((quantity, cartItem) => quantity + cartItem.quantity, 0)
   }
 
-  console.log(sumQuantity())
-
   return (
     <HeaderBackground>
       <HeaderWrapper>

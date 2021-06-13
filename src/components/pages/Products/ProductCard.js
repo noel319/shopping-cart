@@ -16,7 +16,7 @@ const ProductCard = ({ id, title, price, image }) => {
       <Details>
         <Info>
           <Title>{title}</Title>
-          <div>${price}</div>
+          <div>${price.toFixed(2)}</div>
         </Info>
         <Button
           onClick={() => dispatch(addToCart(product))}
