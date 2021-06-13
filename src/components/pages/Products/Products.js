@@ -28,6 +28,7 @@ const Products = () => {
       dispatch(setProducts(filterProducts(await fetchProducts())))
     }
     loadProducts()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const productCards = products.map((product) => (
