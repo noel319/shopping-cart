@@ -5,9 +5,17 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { useDispatch } from 'react-redux'
 import Button from './elements/Button'
 import { openCart } from '../state/actions'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+  const cart = useSelector((state) => state.cart)
   const dispatch = useDispatch()
+
+  const sumQuantity = () => {
+    return cart.reduce((quantity, cartItem) => quantity + cartItem.quantity, 0)
+  }
+
+  console.log(sumQuantity())
 
   return (
     <HeaderBackground>
@@ -19,12 +27,10 @@ const Header = () => {
           <NavbarLink to="/">Home</NavbarLink>
           <NavbarLink to="/products">Products</NavbarLink>
           <NavbarLink to="/contact">Contact</NavbarLink>
-          <Button
-            onClick={() => dispatch(openCart())}
-            content={<FaShoppingCart />}
-            shape="round"
-            animation="scale"
-          ></Button>
+          <ButtonContainer onClick={() => dispatch(openCart())}>
+            <Button content={<FaShoppingCart />} shape="round" />
+            {sumQuantity() > 0 ? <Quantity>{sumQuantity()}</Quantity> : ''}
+          </ButtonContainer>
         </Navbar>
       </HeaderWrapper>
     </HeaderBackground>
@@ -78,6 +84,35 @@ const NavbarLink = styled(Link)`
   &:hover {
     transform: scale(1.1);
   }
+`
+
+const ButtonContainer = styled.div`
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1.02);
+  }
+`
+
+const Quantity = styled.div`
+  position: absolute;
+  top: 4rem;
+  right: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50px;
+  background-color: ${({ theme }) => theme.colors.red};
+  font-size: 2rem;
+  font-weight: bold;
 `
 
 export default Header
