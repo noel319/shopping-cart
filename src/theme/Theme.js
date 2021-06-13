@@ -13,11 +13,13 @@ const Theme = {
       primary: '#35eec2',
       red: '#ee8888',
       grey: '#d4d4d4',
+      dark: '#333',
     },
     active: {
       primary: '#24ddb1',
       red: '#dd7777',
       grey: '#c3c3c3',
+      dark: '#444',
     },
   },
 

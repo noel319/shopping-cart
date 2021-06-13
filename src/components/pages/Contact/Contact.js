@@ -52,9 +52,8 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
-  /* hide footer */
-  margin-bottom: 14.8rem;
+  margin-top: 14rem;
+  margin-bottom: 35rem;
 
   animation: fadeIn ease 2s;
 

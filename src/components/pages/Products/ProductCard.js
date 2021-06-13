@@ -2,18 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from '../../elements/Button'
 
-const ProductCard = ({ image, name, price }) => {
+const ProductCard = ({ image, title, price }) => {
   return (
     <ProductCardWrapper>
-      <img src={image} alt={name}></img>
-      <div>{name}</div>
-      <div>{price}</div>
-      <Button
-        content="Add to cart"
-        size="wide"
-        color="primary"
-        animation="color"
-      />
+      <ImageContainer>
+        <Image src={image} alt={title} />
+      </ImageContainer>
+      <Details>
+        <Info>
+          <Title>{title}</Title>
+          <div>{price}</div>
+        </Info>
+        <Button
+          content="Add to cart"
+          size="wide"
+          color="dark"
+          animation="color"
+        />
+      </Details>
     </ProductCardWrapper>
   )
 }
@@ -21,16 +27,43 @@ const ProductCard = ({ image, name, price }) => {
 const ProductCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid ${({ theme }) => theme.colors.grey.main};
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 2rem;
+`
+
+const Image = styled.img`
+  height: 100%;
+  width: auto;
+`
+
+const ImageContainer = styled.div`
+  height: 25rem;
+  padding: 3rem;
+  margin: 0 auto;
+`
+
+const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  border-top: 1px solid ${({ theme }) => theme.colors.grey.main};
   gap: 2rem;
-  padding: 5rem;
-  background-color: ${({ theme }) => theme.colors.grey.main};
-  font-size: 2.4rem;
+  padding: 2rem;
+`
+
+const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 100%;
+`
+
+const Title = styled.div`
   font-weight: bold;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 `
 
 export default ProductCard

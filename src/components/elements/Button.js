@@ -135,6 +135,19 @@ const ButtonWrapper = styled.button`
             transition: background-color 0.05s ease-in-out;
           }
         `}
+
+        ${({ color }) =>
+        color === 'dark' &&
+        css`
+          &:hover {
+            background-color: ${({ theme }) => theme.colors.hover.dark};
+          }
+
+          &:active {
+            background-color: ${({ theme }) => theme.colors.active.dark};
+            transition: background-color 0.05s ease-in-out;
+          }
+        `}
     `}
 `
 

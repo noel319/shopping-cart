@@ -14,7 +14,7 @@ const Cart = () => {
   const products = exampleProducts.map((product) => (
     <CartItem
       key={uuidv4()}
-      name={product.name}
+      title={product.title}
       price={product.price}
       image={product.image}
     ></CartItem>
@@ -56,9 +56,8 @@ const CartWrapper = styled.div`
   height: 100%;
   width: 59rem;
   padding: 6rem;
-  background-color: ${({ theme }) => theme.colors.grey.light};
+  background-color: #fff;
   font-size: 3rem;
-  font-weight: bold;
   transition: right 0.85s ease-in-out;
   z-index: 1;
 
@@ -74,8 +73,9 @@ const CartWrapper = styled.div`
 `
 
 const Title = styled.div`
-  font-size: 4rem;
   margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: bold;
 `
 
 const Products = styled.div`

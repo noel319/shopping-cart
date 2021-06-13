@@ -29,16 +29,9 @@ const Home = () => {
 
 const HomeWrapper = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  /* hide footer */
-  margin-bottom: 7rem;
-
-  @media (max-width: 1100px) {
-    align-items: center;
-    justify-content: center;
-  }
-
+  gap: 6rem;
+  margin-top: 12rem;
+  margin-bottom: 24rem;
   animation: fadeIn ease 2s;
 
   @keyframes fadeIn {
@@ -49,16 +42,20 @@ const HomeWrapper = styled.div`
       opacity: 1;
     }
   }
+
+  @media (max-width: 1100px) {
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 const Message = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 50rem;
 
   @media (max-width: 1100px) {
     align-items: center;
+    width: 50rem;
   }
 `
 
@@ -82,7 +79,7 @@ const BigMessage = styled.div`
 
 const Underline = styled.img`
   width: 25rem;
-  margin-top: -1.5rem;
+  margin-top: -1rem;
   margin-bottom: 3rem;
 
   @media (max-width: 1100px) {

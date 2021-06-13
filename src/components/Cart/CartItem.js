@@ -3,12 +3,29 @@ import styled from 'styled-components'
 import { FaMinus, FaPlus } from 'react-icons/fa'
 import Button from '../elements/Button'
 
-const CartItem = ({ name, price, image }) => {
+const CartItem = ({ title, price, image }) => {
+  const formatTitle = (title) => {
+    const words = title.split(' ')
+    let result = ''
+    if (words.length < 3) {
+      return title
+    }
+    for (let i = 0; i < 3; i++) {
+      result += words[i] + ' '
+    }
+    if (words.length > 3) {
+      result += '...'
+    }
+    return result
+  }
+
   return (
     <CartItemWrapper>
-      <Image src={image}></Image>
+      <ImageContainer>
+        <Image src={image}></Image>
+      </ImageContainer>
       <Details>
-        <div>{name}</div>
+        <Title>{formatTitle(title)}</Title>
         <div>{price}</div>
         <AmountChanger>
           <Button content={<FaMinus />} color="grey" animation="color"></Button>
@@ -25,7 +42,14 @@ const CartItemWrapper = styled.div`
 `
 
 const Image = styled.img`
-  width: 14rem;
+  height: 100%;
+  width: auto;
+`
+
+const ImageContainer = styled.div`
+  height: 13rem;
+  width: 20%;
+  margin: auto;
 `
 
 const Details = styled.div`
@@ -35,6 +59,12 @@ const Details = styled.div`
   justify-content: space-between;
   width: 100%;
   font-size: 2rem;
+`
+
+const Title = styled.div`
+  font-weight: bold;
+  height: 3rem;
+  overflow: hidden;
 `
 
 const AmountChanger = styled.div`

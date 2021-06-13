@@ -58,22 +58,22 @@ const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2.4rem;
   width: 81rem;
+  font-size: 2.4rem;
 
   @media (max-width: 650px) {
     width: 59rem;
   }
 
   @media (max-width: 450px) {
-    width: 51rem;
+    width: 50rem;
   }
 `
 
 const NavbarLink = styled(Link)`
+  padding: 1rem;
   color: ${({ theme }) => theme.colors.light};
   transition: transform 0.15s ease-in-out;
-  padding: 1rem;
 
   &:hover {
     transform: scale(1.1);
