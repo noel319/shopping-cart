@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import ProductCard from './ProductCard'
+import ProductCard from './Products/ProductCard'
 import { useDispatch, useSelector } from 'react-redux'
-import { setProducts } from '../../../state/actions/products'
+import { setProducts } from '../../state/actions/products'
 import { v4 as uuidv4 } from 'uuid';
 
 const Products = () => {

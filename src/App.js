@@ -7,14 +7,14 @@ import Cart from './components/Cart'
 
 const App = () => {
   return (
-    <div>
+    <>
       <Router>
         <Header />
         <Main />
         <Footer />
       </Router>
       <Cart />
-    </div>
+    </>
   )
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import homepageImage from '../../../assets/images/homepage-image.png'
-import underline from '../../../assets/images/underline.png'
-import Button from '../../elements/Button'
+import homepageImage from '../../assets/images/homepage-image.png'
+import underline from '../../assets/images/underline.png'
+import Button from '../elements/Button'
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <Message>
         <SmallMessage>Best online store of the year</SmallMessage>
         <BigMessage>We don't do fashion, we are fashion</BigMessage>
-        <Underline src={underline} />
+        <Underline src={underline} alt="underline image" />
         <Link to="/products">
           <Button
             content="Shop now"
@@ -101,11 +101,11 @@ const Image = styled.img`
   }
 
   @media (max-width: 650px) {
-    max-width: 58rem;
+    width: 58rem;
   }
 
   @media (max-width: 450px) {
-    max-width: 48rem;
+    width: 48rem;
   }
 `
 

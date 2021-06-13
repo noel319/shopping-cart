@@ -1,4 +1,3 @@
-// using * enables formatting
 import * as styled from 'styled-components'
 
 const GlobalStyle = styled.createGlobalStyle`
