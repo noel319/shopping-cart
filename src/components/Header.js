@@ -66,7 +66,7 @@ const Navbar = styled.nav`
   }
 
   @media (max-width: 450px) {
-    width: 50rem;
+    width: 48rem;
   }
 `
 

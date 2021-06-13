@@ -75,6 +75,10 @@ const BigMessage = styled.div`
     text-align: center;
     margin-bottom: 3rem;
   }
+
+  @media (max-width: 450px) {
+    font-size: 5rem;
+  }
 `
 
 const Underline = styled.img`
@@ -98,6 +102,10 @@ const Image = styled.img`
 
   @media (max-width: 650px) {
     max-width: 58rem;
+  }
+
+  @media (max-width: 450px) {
+    max-width: 48rem;
   }
 `
 

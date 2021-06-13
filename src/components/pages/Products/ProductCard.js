@@ -1,8 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from '../../elements/Button'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../../state/actions/cart'
 
-const ProductCard = ({ image, title, price }) => {
+const ProductCard = ({ id, title, price, image }) => {
+  const product = { id, title, price, image }
+  const dispatch = useDispatch()
+
   return (
     <ProductCardWrapper>
       <ImageContainer>
@@ -11,9 +16,10 @@ const ProductCard = ({ image, title, price }) => {
       <Details>
         <Info>
           <Title>{title}</Title>
-          <div>{price}</div>
+          <div>${price}</div>
         </Info>
         <Button
+          onClick={() => dispatch(addToCart(product))}
           content="Add to cart"
           size="wide"
           color="dark"

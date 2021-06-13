@@ -42,7 +42,7 @@ const Contact = () => {
       </SocialMedia>
       <ContactInfo>
         <p>FakeStore</p>
-        <p>Hollywood Boulevard 42, Los Angeles USA</p>
+        <p>Rodeo Drive 42, Los Angeles USA</p>
       </ContactInfo>
     </ContactWrapper>
   )
