@@ -66,17 +66,11 @@ const GlobalStyle = styled.createGlobalStyle`
 
   @media (max-width: 1400px) {
     html {
-      font-size: 50%;
-    }
-  }
-
-  @media (max-width: 1300px) {
-    html {
       font-size: 45%;
     }
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 500px) {
     html {
       font-size: 40%;
     }

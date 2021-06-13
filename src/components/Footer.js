@@ -27,14 +27,14 @@ const FooterWrapper = styled.footer`
   justify-content: center;
   width: 100%;
   padding: 1rem 0;
-  font-size: 2.4rem;
+  font-size: 2rem;
 `
 
 const GithubLink = styled.a`
   display: flex;
   margin-left: 1rem;
   color: ${({ theme }) => theme.colors.dark};
-  font-size: 2.4rem;
+  font-size: 2rem;
   transition: transform 0.15s ease-in-out;
 
   &:hover {

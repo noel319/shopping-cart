@@ -34,7 +34,7 @@ const HomeWrapper = styled.div`
   /* hide footer */
   margin-bottom: 7rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     align-items: center;
     justify-content: center;
   }
@@ -57,7 +57,7 @@ const Message = styled.div`
   align-items: flex-start;
   width: 50rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     align-items: center;
   }
 `
@@ -74,7 +74,7 @@ const BigMessage = styled.div`
   font-size: 6.4rem;
   font-weight: bold;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     text-align: center;
     margin-bottom: 3rem;
   }
@@ -85,7 +85,7 @@ const Underline = styled.img`
   margin-top: -1.5rem;
   margin-bottom: 3rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `
@@ -93,14 +93,14 @@ const Underline = styled.img`
 const Image = styled.img`
   max-width: 80rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     position: absolute;
     z-index: -1;
     opacity: 0.3;
   }
 
-  @media (max-width: 600px) {
-    max-width: 60rem;
+  @media (max-width: 650px) {
+    max-width: 58rem;
   }
 `
 

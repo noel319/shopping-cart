@@ -22,13 +22,13 @@ const ProductsWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 12rem;
 
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(2, 40rem);
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 36rem);
     justify-content: center;
     gap: 8rem;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 650px) {
     grid-template-columns: repeat(1, 40rem);
   }
 

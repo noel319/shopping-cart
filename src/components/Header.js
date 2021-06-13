@@ -43,7 +43,7 @@ const HeaderWrapper = styled.div`
   padding: 4rem 0;
   margin: 0 auto;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
     gap: 4rem;
   }
@@ -59,20 +59,21 @@ const Navbar = styled.nav`
   align-items: center;
   justify-content: space-between;
   font-size: 2.4rem;
-  width: 80rem;
+  width: 81rem;
 
-  @media (max-width: 600px) {
-    width: 60rem;
+  @media (max-width: 650px) {
+    width: 59rem;
   }
 
   @media (max-width: 450px) {
-    width: 50rem;
+    width: 51rem;
   }
 `
 
 const NavbarLink = styled(Link)`
   color: ${({ theme }) => theme.colors.light};
   transition: transform 0.15s ease-in-out;
+  padding: 1rem;
 
   &:hover {
     transform: scale(1.1);

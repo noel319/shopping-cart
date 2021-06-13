@@ -67,6 +67,10 @@ const CartWrapper = styled.div`
     css`
       right: 0;
     `}
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `
 
 const Title = styled.div`
