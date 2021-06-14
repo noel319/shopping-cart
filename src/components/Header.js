@@ -16,8 +16,8 @@ const Header = () => {
   }
 
   return (
-    <HeaderBackground>
-      <HeaderWrapper>
+    <HeaderWrapper>
+      <Container>
         <Link to="/">
           <Logo>FakeStore</Logo>
         </Link>
@@ -30,24 +30,24 @@ const Header = () => {
             {sumQuantity() > 0 ? <Quantity>{sumQuantity()}</Quantity> : ''}
           </ButtonContainer>
         </Navbar>
-      </HeaderWrapper>
-    </HeaderBackground>
+      </Container>
+    </HeaderWrapper>
   )
 }
 
-const HeaderBackground = styled.header`
+const HeaderWrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.dark};
 `
 
-const HeaderWrapper = styled.div`
+const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: ${({ theme }) => theme.widths.content};
-  padding: 4rem 0;
   margin: 0 auto;
+  padding: 4rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 4rem;
   }
@@ -62,15 +62,12 @@ const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 81rem;
+  gap: 7rem;
   font-size: 2.4rem;
 
-  @media (max-width: 650px) {
-    width: 59rem;
-  }
-
-  @media (max-width: 450px) {
-    width: 48rem;
+  @media (max-width: 480px) {
+    gap: 0;
+    width: 100%;
   }
 `
 

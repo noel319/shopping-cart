@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../../elements/Button'
+import Button from '../../components/elements/Button'
 import { useDispatch } from 'react-redux'
-import { addToCart } from '../../../state/actions/cart'
+import { addToCart } from '../../state/actions/cart'
 
 const ProductCard = ({ id, title, price, image }) => {
   const product = { id, title, price, image }

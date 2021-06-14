@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import homepageImage from '../../assets/images/homepage-image.png'
-import underline from '../../assets/images/underline.png'
-import Button from '../elements/Button'
+import homepageImage from '../assets/images/homepage-image.png'
+import underline from '../assets/images/underline.png'
+import Button from '../components/elements/Button'
 
 const Home = () => {
   return (
