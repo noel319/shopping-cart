@@ -12,7 +12,7 @@ const Home = () => {
         <SmallMessage>Best online store of the year</SmallMessage>
         <BigMessage>We don't do fashion, we are fashion</BigMessage>
         <Underline src={underline} alt="underline image" />
-        <Link to="/products">
+        <Link to="/shopping-cart/products">
           <Button
             content="Shop now"
             size="big"
