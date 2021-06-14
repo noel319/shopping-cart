@@ -29,9 +29,10 @@ const Home = () => {
 
 const HomeWrapper = styled.div`
   display: flex;
-  gap: 6rem;
-  margin-top: 12rem;
-  margin-bottom: 24rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6rem;
+  margin-bottom: 18rem;
   animation: fadeIn ease 2s;
 
   @keyframes fadeIn {
@@ -43,19 +44,22 @@ const HomeWrapper = styled.div`
     }
   }
 
-  @media (max-width: 1100px) {
-    align-items: center;
+  @media (max-width: 1024px) {
     justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
   }
 `
 
 const Message = styled.div`
   display: flex;
   flex-direction: column;
+  width: 50rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1024px) {
     align-items: center;
-    width: 50rem;
   }
 `
 
@@ -65,13 +69,17 @@ const SmallMessage = styled.div`
   font-weight: bold;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
+
+  @media (max-width: 450px) {
+    font-size: 1.4rem;
+  }
 `
 
 const BigMessage = styled.div`
   font-size: 6.4rem;
   font-weight: bold;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1024px) {
     text-align: center;
     margin-bottom: 3rem;
   }
@@ -86,26 +94,23 @@ const Underline = styled.img`
   margin-top: -1rem;
   margin-bottom: 3rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `
 
 const Image = styled.img`
-  max-width: 80rem;
+  width: 75rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1024px) {
     position: absolute;
     z-index: -1;
+    width: 100%;
     opacity: 0.3;
   }
 
-  @media (max-width: 650px) {
-    width: 58rem;
-  }
-
-  @media (max-width: 450px) {
-    width: 48rem;
+  @media (max-width: 600px) {
+    top: 25rem;
   }
 `
 
