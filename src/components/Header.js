@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Container>
-        <Link to="/">
+        <Link to="/shopping-cart">
           <Logo>FakeStore</Logo>
         </Link>
         <Navbar>
