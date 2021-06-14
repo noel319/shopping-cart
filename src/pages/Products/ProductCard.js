@@ -40,8 +40,8 @@ const ProductCardWrapper = styled.div`
 `
 
 const Image = styled.img`
-  height: 100%;
   width: auto;
+  height: 100%;
 `
 
 const ImageContainer = styled.div`
@@ -54,10 +54,10 @@ const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
-  border-top: 1px solid ${({ theme }) => theme.colors.grey.main};
   gap: 2rem;
+  height: 100%;
   padding: 2rem;
+  border-top: 1px solid ${({ theme }) => theme.colors.grey.main};
 `
 
 const Info = styled.div`

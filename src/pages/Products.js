@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ProductCard from './Products/ProductCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { setProducts } from '../state/actions/products'
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'
 
 const Products = () => {
   const products = useSelector((state) => state.products)
@@ -28,7 +28,7 @@ const Products = () => {
       dispatch(setProducts(filterProducts(await fetchProducts())))
     }
     loadProducts()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const productCards = products.map((product) => (
@@ -46,26 +46,17 @@ const Products = () => {
 
 const ProductsWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
-  margin: 0 auto;
-  margin-top: 8rem;
-  margin-bottom: 13.2rem;
+  margin-top: 4rem;
 
-  @media (max-width: 1100px) {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 110rem;
-    padding: 0 4rem;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(28rem, 36rem));
+    justify-content: center;
   }
 
-  @media (max-width: 700px) {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 80rem;
-  }
-
-  @media (max-width: 550px) {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 40rem;
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 36rem);
   }
 
   animation: fadeIn ease 2s;
