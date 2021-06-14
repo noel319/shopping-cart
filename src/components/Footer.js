@@ -10,7 +10,11 @@ const Footer = () => {
   return (
     <FooterWrapper>
       Copyright © 2021 michalosman
-      <GithubLink href="https://github.com/michalosman" target="_blank" rel="noopener">
+      <GithubLink
+        href="https://github.com/michalosman"
+        target="_blank"
+        rel="noopener"
+      >
         <FaGithub />
       </GithubLink>
       {location.pathname !== '/products' && (

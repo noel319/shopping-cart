@@ -58,19 +58,19 @@ const Cart = () => {
 
 const CartWrapper = styled.div`
   position: fixed;
+  z-index: 1;
   top: 0;
   right: -110%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4rem;
-  height: 100%;
   width: 59rem;
+  height: 100%;
   padding: 6rem;
   background-color: #fff;
   font-size: 3rem;
   transition: right 0.85s ease-in-out;
-  z-index: 1;
 
   ${({ isOpen }) =>
     isOpen &&
@@ -78,7 +78,7 @@ const CartWrapper = styled.div`
       right: 0;
     `}
 
-  @media (max-width: 450px) {
+  @media (max-width: 480px) {
     width: 100%;
   }
 `
@@ -92,10 +92,9 @@ const Title = styled.div`
 const Products = styled.div`
   display: flex;
   flex-direction: column;
-  overflow: auto;
   gap: 3rem;
   width: 100%;
-  height: 45rem;
+  overflow: auto;
 `
 
 const Total = styled.div`

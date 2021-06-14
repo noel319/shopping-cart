@@ -1,15 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-const Button = ({
-  onClick,
-  content,
-  shape,
-  size,
-  color,
-  animation,
-  attachment,
-}) => {
+const Button = ({ onClick, content, shape, size, color, animation }) => {
   return (
     <ButtonWrapper
       onClick={onClick}
@@ -17,10 +9,8 @@ const Button = ({
       shape={shape}
       color={color}
       animation={animation}
-      attachment={attachment}
     >
       {content}
-      {attachment}
     </ButtonWrapper>
   )
 }

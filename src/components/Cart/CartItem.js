@@ -49,15 +49,15 @@ const CartItemWrapper = styled.div`
   display: flex;
 `
 
-const Image = styled.img`
-  height: 100%;
-  width: auto;
-`
-
 const ImageContainer = styled.div`
   height: 13rem;
   width: 20%;
   margin: auto;
+`
+
+const Image = styled.img`
+  width: auto;
+  height: 100%;
 `
 
 const Details = styled.div`
@@ -70,8 +70,8 @@ const Details = styled.div`
 `
 
 const Title = styled.div`
-  font-weight: bold;
   height: 3rem;
+  font-weight: bold;
   overflow: hidden;
 `
 
