@@ -32,7 +32,7 @@ const HomeWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 6rem;
-  margin-bottom: 18rem;
+  margin-bottom: 20rem;
   animation: fadeIn ease 2s;
 
   @keyframes fadeIn {

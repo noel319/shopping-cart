@@ -52,8 +52,9 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10rem;
   margin-top: 14rem;
-  margin-bottom: 34.8rem;
+  margin-bottom: 26.5rem;
 
   animation: fadeIn ease 2s;
 
@@ -65,21 +66,23 @@ const ContactWrapper = styled.div`
       opacity: 1;
     }
   }
+
+  @media (max-width: 480px) {
+    margin-top: 5rem;
+  }
 `
 
 const SocialMedia = styled.div`
   display: flex;
   gap: 10rem;
   font-size: 10rem;
-  margin-bottom: 10rem;
 
-  @media (max-width: 1000px) {
-    gap: 8rem;
+  @media (max-width: 768px) {
+    gap: 5rem;
     font-size: 8rem;
   }
 
-  @media (max-width: 650px) {
-    gap: 5rem;
+  @media (max-width: 480px) {
     font-size: 5rem;
   }
 `
@@ -88,9 +91,8 @@ const ContactInfo = styled.div`
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 5rem;
 
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     font-size: 2.4rem;
   }
 `
