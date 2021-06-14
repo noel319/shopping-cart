@@ -22,9 +22,9 @@ const Header = () => {
           <Logo>FakeStore</Logo>
         </Link>
         <Navbar>
-          <NavbarLink to="/">Home</NavbarLink>
-          <NavbarLink to="/products">Products</NavbarLink>
-          <NavbarLink to="/contact">Contact</NavbarLink>
+          <NavbarLink to="/shopping-cart">Home</NavbarLink>
+          <NavbarLink to="/shopping-cart/products">Products</NavbarLink>
+          <NavbarLink to="/shopping-cart/contact">Contact</NavbarLink>
           <ButtonContainer onClick={() => dispatch(openCart())}>
             <Button content={<FaShoppingCart />} shape="round" />
             {sumQuantity() > 0 ? <Quantity>{sumQuantity()}</Quantity> : ''}

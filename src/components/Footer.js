@@ -17,7 +17,7 @@ const Footer = () => {
       >
         <FaGithub />
       </GithubLink>
-      {location.pathname !== '/products' && (
+      {location.pathname !== '/shopping-cart/products' && (
         <BackgroundWave src={backgroundWave} alt="background image" />
       )}
     </FooterWrapper>

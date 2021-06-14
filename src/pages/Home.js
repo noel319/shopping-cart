@@ -33,16 +33,6 @@ const HomeWrapper = styled.div`
   justify-content: space-between;
   margin-top: 6rem;
   margin-bottom: 20rem;
-  animation: fadeIn ease 2s;
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
   @media (max-width: 1024px) {
     justify-content: center;
@@ -57,6 +47,17 @@ const Message = styled.div`
   display: flex;
   flex-direction: column;
   width: 50rem;
+
+  animation: fadeIn ease 2s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   @media (max-width: 1024px) {
     align-items: center;
@@ -101,12 +102,23 @@ const Underline = styled.img`
 
 const Image = styled.img`
   width: 75rem;
+  animation: fadeIn ease 2s;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
   @media (max-width: 1024px) {
     position: absolute;
     z-index: -1;
     width: 100%;
-    opacity: 0.3;
+    opacity: 0.4;
+    animation: none;
   }
 
   @media (max-width: 600px) {

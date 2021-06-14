@@ -9,9 +9,9 @@ const Main = () => {
   return (
     <MainWrapper>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/products" component={Products} />
-        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/shopping-cart" component={Home} />
+        <Route exact path="/shopping-cart/products" component={Products} />
+        <Route exact path="/shopping-cart/contact" component={Contact} />
       </Switch>
     </MainWrapper>
   )
