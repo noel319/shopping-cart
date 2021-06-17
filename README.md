@@ -20,4 +20,4 @@ npm start
 - [React Router](https://reactrouter.com/)
 - [styled-components](https://styled-components.com/)
 - [Fake Store API](https://fakestoreapi.com/)
-- [Figma](https://figma.com/) ([initial project](https://www.figma.com/proto/tYY0x54qPHftxtQN55kirT/Shopping-cart?node-id=37%3A27&scaling=min-zoom))
+- [Figma](https://figma.com/)
