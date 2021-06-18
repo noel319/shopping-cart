@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Button from '../../components/elements/Button'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../state/actions/cart'
+import PropTypes from 'prop-types'
 
 const ProductCard = ({ id, title, price, image }) => {
   const product = { id, title, price, image }
@@ -28,6 +29,13 @@ const ProductCard = ({ id, title, price, image }) => {
       </Details>
     </ProductCardWrapper>
   )
+}
+
+ProductCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
 }
 
 const ProductCardWrapper = styled.div`

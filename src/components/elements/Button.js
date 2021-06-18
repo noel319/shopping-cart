@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import PropTypes from 'prop-types'
 
 const Button = ({ onClick, content, shape, size, color, animation }) => {
   return (
@@ -13,6 +14,15 @@ const Button = ({ onClick, content, shape, size, color, animation }) => {
       {content}
     </ButtonWrapper>
   )
+}
+
+Button.propTypes = {
+  onClick: PropTypes.func,
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  shape: PropTypes.string,
+  size: PropTypes.string,
+  color: PropTypes.string,
+  animation: PropTypes.string,
 }
 
 const ButtonWrapper = styled.button`

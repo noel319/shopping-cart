@@ -4,6 +4,7 @@ import { FaMinus, FaPlus } from 'react-icons/fa'
 import Button from '../elements/Button'
 import { addToCart, removeFromCart } from '../../state/actions'
 import { useDispatch } from 'react-redux'
+import PropTypes from 'prop-types'
 
 const CartItem = ({ id, title, price, image, quantity }) => {
   const cartItem = { id, title, price, image, quantity }
@@ -43,6 +44,14 @@ const CartItem = ({ id, title, price, image, quantity }) => {
       </Details>
     </CartItemWrapper>
   )
+}
+
+CartItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired,
 }
 
 const CartItemWrapper = styled.div`
