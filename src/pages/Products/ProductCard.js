@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../../components/elements/Button'
-import { useDispatch } from 'react-redux'
-import { addToCart } from '../../state/actions/cart'
 import PropTypes from 'prop-types'
+import { useDispatch } from 'react-redux'
+import Button from '../../components/elements/Button'
+import { addToCart } from '../../state/actions/cart'
 
-const ProductCard = ({ id, title, price, image }) => {
-  const product = { id, title, price, image }
+const ProductCard = ({ id, title, price, image, category }) => {
+  const product = { id, title, price, image, category }
   const dispatch = useDispatch()
 
   return (
@@ -36,6 +36,7 @@ ProductCard.propTypes = {
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
+  category: PropTypes.string,
 }
 
 const ProductCardWrapper = styled.div`

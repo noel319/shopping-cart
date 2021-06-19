@@ -1,4 +1,4 @@
-import { OPEN_CART, CLOSE_CART } from '../constants/actionTypes'
+import { OPEN_CART, CLOSE_CART } from '../../constants/actionTypes'
 
 const INIT_STATE = false
 

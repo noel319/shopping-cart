@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import { FaMinus, FaPlus } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
 import Button from '../elements/Button'
 import { addToCart, removeFromCart } from '../../state/actions'
-import { useDispatch } from 'react-redux'
-import PropTypes from 'prop-types'
 
-const CartItem = ({ id, title, price, image, quantity }) => {
+const CardItemCard = ({ id, title, price, image, quantity }) => {
   const cartItem = { id, title, price, image, quantity }
+  const product = { id, title, price, image }
   const dispatch = useDispatch()
 
   const formatTitle = (title) => {
@@ -19,7 +20,7 @@ const CartItem = ({ id, title, price, image, quantity }) => {
   }
 
   return (
-    <CartItemWrapper>
+    <CartItemCardWrapper>
       <ImageContainer>
         <Image src={image}></Image>
       </ImageContainer>
@@ -28,25 +29,25 @@ const CartItem = ({ id, title, price, image, quantity }) => {
         <div>${sumPrice()}</div>
         <AmountChanger>
           <Button
-            onClick={() => dispatch(removeFromCart(cartItem))}
+            onClick={() => dispatch(removeFromCart(product))}
             content={<FaMinus />}
             color="grey"
             animation="color"
           ></Button>
           <div>{cartItem.quantity}</div>
           <Button
-            onClick={() => dispatch(addToCart(cartItem))}
+            onClick={() => dispatch(addToCart(product))}
             content={<FaPlus />}
             color="grey"
             animation="color"
           ></Button>
         </AmountChanger>
       </Details>
-    </CartItemWrapper>
+    </CartItemCardWrapper>
   )
 }
 
-CartItem.propTypes = {
+CardItemCard.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
@@ -54,7 +55,7 @@ CartItem.propTypes = {
   quantity: PropTypes.number.isRequired,
 }
 
-const CartItemWrapper = styled.div`
+const CartItemCardWrapper = styled.div`
   display: flex;
 `
 
@@ -90,4 +91,4 @@ const AmountChanger = styled.div`
   gap: 3rem;
 `
 
-export default CartItem
+export default CardItemCard

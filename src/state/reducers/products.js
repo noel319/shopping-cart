@@ -1,4 +1,4 @@
-import { SET_PRODUCTS } from '../constants/actionTypes'
+import { SET_PRODUCTS } from '../../constants/actionTypes'
 
 const INIT_STATE = []
 

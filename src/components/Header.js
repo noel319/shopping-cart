@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { FaShoppingCart } from 'react-icons/fa'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Button from './elements/Button'
+import routes from '../constants/routes.json'
 import { openCart } from '../state/actions'
-import { useSelector } from 'react-redux'
 
 const Header = () => {
   const cart = useSelector((state) => state.cart)
@@ -18,13 +18,13 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Container>
-        <Link to="/shopping-cart">
+        <Link to={routes.HOME}>
           <Logo>FakeStore</Logo>
         </Link>
         <Navbar>
-          <NavbarLink to="/shopping-cart">Home</NavbarLink>
-          <NavbarLink to="/shopping-cart/products">Products</NavbarLink>
-          <NavbarLink to="/shopping-cart/contact">Contact</NavbarLink>
+          <NavbarLink to={routes.HOME}>Home</NavbarLink>
+          <NavbarLink to={routes.PRODUCTS}>Products</NavbarLink>
+          <NavbarLink to={routes.CONTACT}>Contact</NavbarLink>
           <ButtonContainer onClick={() => dispatch(openCart())}>
             <Button content={<FaShoppingCart />} shape="round" />
             {sumQuantity() > 0 ? <Quantity>{sumQuantity()}</Quantity> : ''}
