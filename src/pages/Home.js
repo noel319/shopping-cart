@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import homepageImage from '../assets/images/homepage-image.png'
 import underline from '../assets/images/underline.png'
 import Button from '../components/elements/Button'
+import routes from '../constants/routes.json'
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
         <SmallMessage>Best online store of the year</SmallMessage>
         <BigMessage>We don't do fashion, we are fashion</BigMessage>
         <Underline src={underline} alt="underline image" />
-        <Link to="/shopping-cart/products">
+        <Link to={routes.PRODUCTS}>
           <Button
             content="Shop now"
             size="big"

@@ -9,6 +9,15 @@ const Products = () => {
   const products = useSelector((state) => state.products)
   const dispatch = useDispatch()
 
+  useEffect(() => {
+    loadProducts()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const loadProducts = async () => {
+    dispatch(setProducts(filterProducts(await fetchProducts())))
+  }
+
   const fetchProducts = async () => {
     const response = await fetch('https://fakestoreapi.com/products')
     let data = await response.json()
@@ -22,14 +31,6 @@ const Products = () => {
         product.category === `women's clothing`
     )
   }
-
-  useEffect(() => {
-    const loadProducts = async () => {
-      dispatch(setProducts(filterProducts(await fetchProducts())))
-    }
-    loadProducts()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   const productCards = products.map((product) => (
     <ProductCard
